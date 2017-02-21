@@ -155,6 +155,11 @@ body {
   color: #555555;
 }
 
+.sidemenu--list {
+  position: relative;
+  overflow: hidden;
+}
+
 .sidemenu--item {
   border-top: 1px solid #f6f6f6;
   border-bottom: 1px solid #f6f6f6;
