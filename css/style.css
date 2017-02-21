@@ -62,21 +62,48 @@ body {
 }
 
 
-@media screen and (max-width: 1700px) {
+
+
+@media screen and (min-width: 1400px) {
   body {
     font-size: 16px;
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1200px) {
   body {
-    font-size: 15px;
+    font-size: 13px;
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1150px) {
   body {
-    font-size: 14px;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    font-size: 9px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  body {
+    font-size: 7px;
   }
 }
 
@@ -660,7 +687,7 @@ body {
   left: 13%;
   color: white;
   width: 75%;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .win--button {
