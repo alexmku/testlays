@@ -26,15 +26,12 @@ $(document).ready(function() {
 
 
 
-
     $('[data-js-mobileopener] .sidemenu--mobile-opener, [data-js-mobileopener] .sidemenu--item.__close').click(function() {
         if ($(this).closest('.sidemenu').attr('data-js-mobileopener') == 'closed')
             $(this).closest('.sidemenu').attr('data-js-mobileopener', 'opened');
         else
            $(this).closest('.sidemenu').attr('data-js-mobileopener', 'closed');
     });
-
-
 
 
 
@@ -50,8 +47,6 @@ $(window).scroll(function(){
 
 
 
-
-
 $(window).resize(function() {
     blocksresize();
 });
@@ -60,22 +55,34 @@ $(window).resize(function() {
 
 
 
-
-
 function blocksresize() {
     var w = $('.block').first().width();
-    $('.block').each(function() {
-        $(this).outerHeight(w);
-    });
+    
+
+    if ($(window).width() > 1500) {
+        $('.block').each(function() {
+            $(this).outerHeight(w*1.017);
+        });
+    } else if ($(window).width() > 685) {
+        $('.block').each(function() {
+            $(this).outerHeight(w*1.018);
+        });
+    } else {
+        $('.block').each(function() {
+            $(this).outerHeight(w*1);
+        });
+    }
+
+
 
     $('.menu--itemback').each(function() {
         $(this).outerHeight($(this).width());
     });
 
     if ($(window).width() > 685)
-        $('.header').height(w*0.91);
+        $('.header').height(w*0.925);
     else {
-        $('.header').height(w*2);
+        $('.header').height(w*2); //1.729
         $('[data-js-switchblocks]').height(w*2);
     }
     
